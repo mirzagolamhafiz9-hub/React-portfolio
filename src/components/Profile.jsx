@@ -1,40 +1,44 @@
-import{motion} from "framer-motion";
+import { motion } from "framer-motion";
 
 function Profile() {
   return (
-    <motion.div id="profile" 
+    <motion.div
+      id="profile"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.9 }}
-      className="bg-blue-300 max-w-4xl mx-20 p-4  rounded-lg shadow-md mt-8 "
+      className="shadow-2xl shadow-black/40 bg-gray-700 max-w-4xl mx-auto p-4 md:p-8 rounded-lg shadow-md mt-8"
     >
-      <h1 className="text-4xl font-bold mb-6 py-4 px-8 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 text-white rounded-full border-4 border-blue-500">
-        Profile Page
+      {/* Title */}
+      <h1 className="text-2xl md:text-4xl font-bold mb-6 py-3 px-4 md:px-8   text-center">
+        Profile 
       </h1>
-      <div className="flex items-center justify-between px-8 py-4 ">
+
+      {/* Content */}
+      <div className="flex flex-col md:flex-row items-center gap-6 px-4 md:px-8 py-4">
+
+        {/* Image */}
         <motion.img
           src="/azom.jpeg"
           alt="Profile Image"
-          className="rounded-full mx-auto h-80 w-80 object-cover border-4 border-blue-500 mt-8 mr-8"
+          className="rounded-full w-40 h-40 md:w-80 md:h-80 object-cover border-4 border-blue-500"
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ duration: 0.9 }}
         />
 
-      <p className="text-lg  text-gray-900">
-        Hi! I'm a passionate web developer with a love for creating
-        beautiful and functional websites. I have experience in HTML,
-        CSS, JavaScript, and React. I enjoy learning new technologies
-        and continuously improving my skills. If you'd like to know
-        more about me or my work, feel free to reach out!
-      </p>
+        {/* Text */}
+        <p className="text-base md:text-lg text-gray-900 text-center md:text-left">
+           I am a passionate Frontend Developer who enjoys building modern,
+           responsive, and user-friendly websites using React, JavaScript,
+           HTML, CSS, and Tailwind CSS. I love learning new technologies,
+           improving my skills, and creating clean and interactive web
+           experiences that work smoothly across all devices.
+        </p>
 
       </div>
-      
-      
-
     </motion.div>
   );
-};
+}
 
 export default Profile;
