@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+/* index.css or App.css */
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-rotate {
+  animation: rotate 4s linear infinite;
+}
