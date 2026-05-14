@@ -3,14 +3,17 @@ function Projects() {
     {
       title: "Portfolio Website",
       tech: "React + Tailwind CSS",
+      live: "https://mirza-portfolio-tau-amber-83.vercel.app/"
     },
     {
       title: "Todo App",
       tech: "JavaScript",
+      live: "#"
     },
     {
       title: "E-commerce UI",
       tech: "Next.js",
+      live: "#"
     },
   ];
 
@@ -39,9 +42,14 @@ function Projects() {
               {project.tech}
             </p>
 
-            <button className="mt-5 px-4 py-2 bg-white text-black rounded-lg font-medium hover:bg-gray-200 transition">
+            <a
+              href={project.live}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-5 px-4 py-2 bg-white text-black rounded-lg font-medium hover:bg-gray-200 transition"
+            >
               View Project
-            </button>
+            </a>
           </div>
         ))}
       </div>
